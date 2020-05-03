@@ -25,7 +25,7 @@ def main():
 def create_reddit():
 	return praw.Reddit(
 		"watcher",
-		user_agent="web:watcher:v0.1.0 (by u/MrGamer00)"
+		user_agent="web:watcher:v1.0.0 (by u/MrGamer00)"
 	)
 
 def search(subreddit):
@@ -59,23 +59,23 @@ def create_message(search_results):
 
 	for keyword in keywords:
 		if (i < len(keywords) - 1):
-			category_list += "**" + keyword + "**, "
+			category_list += f"**{keyword}**, "
 		else:
-			category_list += "**" + keyword + "** "
+			category_list += f"**{keyword}** "
 
-		links += "\n\n## " + keyword + "\n"
+		links += f"\n\n## {keyword}\n"
 
 		for submission in search_results[keyword]:
 			date_created = generate_date_string(submission)
 
-			links += "- [" + submission.title + "](" + submission.permalink + ") (" + date_created + ")\n"
+			links += f"- [{submission.title}]({submission.permalink}) ({date_created})\n"
 
 		i += 1
 
-	header = "# New Listings Found\n\n" + CATEGORY + " in the categories: " + category_list + "have been found.\n\n"
-	body = "Links to the postings:" + links
+	header = f"# New Submissions Found\n\n{CATEGORY} matching the search string{'s' if len(category_list) > 1 else ''} {category_list} have been found."
+	body = f"Links to the postings: {links}"
 
-	return header + body
+	return f"{header}\n\n{body}"
 
 def generate_date_string(submission):
 	date = datetime.datetime.fromtimestamp(submission.created_utc)

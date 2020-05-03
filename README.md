@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 #### Software
 
-* [Python 3.5+](https://www.python.org/)
+* [Python 3.6+](https://www.python.org/)
 * [praw](https://praw.readthedocs.io/en/latest/)
 
 ```
