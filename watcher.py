@@ -1,9 +1,14 @@
 import datetime
+import json
 import praw
 
-SEARCH_STRINGS = ["parts", "repair", "for parts", "for repair", "for parts or repair", "copernic", "kopernic", "copernicus"]
-USER = "MrGamer00"
-SUBREDDIT = "watchexchange"
+with open("config.json") as json_data_file:
+	data = json.load(json_data_file)
+
+SEARCH_STRINGS = data["search_strings"]
+USER = data["user"]
+SUBREDDIT = data["subreddit"]
+TIME_FILTER = data["time_filter"]
 
 def main():
 	reddit = create_reddit()
@@ -29,7 +34,7 @@ def search(subreddit):
 		query = subreddit.search(
 			keyword,
 			sort="new",
-			time_filter="hour"
+			time_filter=TIME_FILTER
 		)
 
 		query_results = []

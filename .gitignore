@@ -10,3 +10,4 @@ pip-delete-this-directory.txt
 # Configs
 .vscode/
 praw.ini
+config.json
