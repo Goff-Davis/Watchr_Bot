@@ -53,6 +53,27 @@ You will also need a `config.json` file with the following structure:
 
 This script can be run manually. Alternatively you can execute it programmatically, for example as a cronjob. I personally am running it on a [Digital Ocean](https://www.digitalocean.com/) droplet as a cronjob once per hour.
 
+## Example of found results message
+
+```
+# New Listings Found
+
+Watches in the categories: **parts**, **repair**, **for repair** have been found.
+
+Links to the postings:
+
+## parts
+- [[WTS] Orient Ray Gen 1, Timex E-Compass (T49531), Seiko Compatible Modded Bezel Part](/r/Watchexchange/comments/gch45v/wts_orient_ray_gen_1_timex_ecompass_t49531_seiko/) (05-02-2020 20:24)
+
+
+## repair
+- [[WTS] Vostok, Dumai and Gameboy Watch + Clocks for Repair](/r/Watchexchange/comments/gcr69z/wts_vostok_dumai_and_gameboy_watch_clocks_for/) (05-03-2020 10:07)
+
+
+## for repair
+- [[WTS] Vostok, Dumai and Gameboy Watch + Clocks for Repair](/r/Watchexchange/comments/gcr69z/wts_vostok_dumai_and_gameboy_watch_clocks_for/) (05-03-2020 10:07)
+```
+
 ## Built With
 
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
