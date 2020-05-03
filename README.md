@@ -84,7 +84,7 @@ Links to the postings:
 
 ## Authors
 
-* **Davis Goff** - [Goff_Davis](https://github.com/Goff-Davis)
+* **Davis Goff** - [Goff-Davis](https://github.com/Goff-Davis)
 
 ## License
 
