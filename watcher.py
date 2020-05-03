@@ -6,6 +6,7 @@ with open("config.json") as json_data_file:
 	data = json.load(json_data_file)
 
 SEARCH_STRINGS = data["search_strings"]
+CATEGORY = data["search_category"]
 USER = data["user"]
 SUBREDDIT = data["subreddit"]
 TIME_FILTER = data["time_filter"]
@@ -71,7 +72,7 @@ def create_message(search_results):
 
 		i += 1
 
-	header = "# New Listings Found\n\nWatches in the categories: " + category_list + "have been found.\n\n"
+	header = "# New Listings Found\n\n" + CATEGORY + " in the categories: " + category_list + "have been found.\n\n"
 	body = "Links to the postings:" + links
 
 	return header + body
@@ -83,7 +84,7 @@ def generate_date_string(submission):
 
 def send_message(message, user):
 	user.message(
-		"Watches you are looking for have been listed.",
+		"" + CATEGORY + " has been posted.",
 		message
 	)
 

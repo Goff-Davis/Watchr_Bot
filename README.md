@@ -45,6 +45,7 @@ You will also need a `config.json` file with the following structure:
 ```
 {
 	"search_strings": ["<array of strings you want to search for>"],
+	"search_category": "<Name of what you are searching for (for message formatting)>"
 	"user": "<the username of the person you want to message>",
 	"subreddit": "<the subreddit you want to search>",
 	"time_filter": "<what time frame you want to search for>"
