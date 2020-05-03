@@ -1,5 +1,7 @@
 # Watchr_Bot
 
+![License](https://img.shields.io/github/license/Goff-Davis/Watchr_Bot?style=flat-square)
+
 A reddit search bot I created to search r/watchexchange for watches that I want. Currently it searches for broken watches or parts and the Raketa Kopernic. It messages my personal reddit user when it finds something.
 
 ## Getting Started
