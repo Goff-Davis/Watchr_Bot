@@ -84,7 +84,7 @@ def generate_date_string(submission):
 
 def send_message(message, user):
 	user.message(
-		"" + CATEGORY + " has been posted.",
+		f"{CATEGORY} has been posted.",
 		message
 	)
 
